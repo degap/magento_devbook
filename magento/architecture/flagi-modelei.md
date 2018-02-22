@@ -35,5 +35,5 @@ if ($dirtyRules->getState()) {
 $this->_objectManager->create(\Magento\CatalogRule\Model\Flag::class)->loadSelf()->setState(0)->save();
 ```
 
-Каждому классу, дочернему от \Magento\Framework\Flag соответствует одна запись в таблице.
+Каждому классу, дочернему от \Magento\Framework\Flag, соответствует одна запись в таблице.
 
