@@ -6,13 +6,23 @@
 * бесплатная доставка при стоимости заказа выше заданной
 * задание расписания действия скидок
 
-### [Ценовые правила каталога](http://docs.magento.com/m2/ee/user_guide/marketing/price-rules-catalog.html) 
+### [Ценовые правила каталога](http://docs.magento.com/m2/ee/user_guide/marketing/price-rules-catalog.html)
 
 Используются для выборочного предоставления скидки на товары. Не используют купоны, поскольку применяются до попадания товара в корзину.
 
 ##### Шаг 1 Добавление нового правила
 
+Контроллер:  \Magento\CatalogRule\Controller\Adminhtml\Promo\Catalog\Save
 
+Репозиторий: \Magento\CatalogRule\Api\CatalogRuleRepositoryInterface
+
+Модель: \Magento\CatalogRule\Model\Rule
+
+Сохранение стандартное. Создается и загружается по id модель, заполняется данными, сохраняется через репозиторий.
+
+При установленном параметре _auto\_apply_ переадресовывается на действие _applyRules._
+
+Изменение поведения модели, проверяемое методом _isRuleBehaviorChanged_ вызывает создание и сохранение объекта \Magento\CatalogRule\Model\Flag 
 
 
 
