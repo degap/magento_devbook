@@ -14,6 +14,7 @@
     * [Маркетинговые акции](magento/modules/marketingovie-aktsii.md)
   * [Компоненты](magento/podsistemi.md)
     * [Ценообразование](magento/podsistemi/tsenoobrazovanie.md)
+    * [Индексирование](magento/podsistemi/indeksirovanie.md)
   * [Терминология](magento/term.md)
   * [Тестирование](magento/testing.md)
   * [Cookbook](cookbook/magento.md)
