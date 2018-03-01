@@ -15,6 +15,7 @@
   * [Компоненты](magento/podsistemi.md)
     * [Ценообразование](magento/podsistemi/tsenoobrazovanie.md)
     * [Индексирование](magento/podsistemi/indeksirovanie.md)
+    * [Плагины](magento/podsistemi/plagini.md)
   * [Терминология](magento/term.md)
   * [Тестирование](magento/testing.md)
   * [Cookbook](cookbook/magento.md)
