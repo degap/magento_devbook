@@ -74,7 +74,31 @@ Magento выполняет эти методы до и после изменяе
 
 Классы и интерфейсы, который реализуют или наследуют классы, имеющие плагины, также наследуют плагины родительского класса.
 
-Magento использует плагины, определенные в глобальной области система находится в определенном пространстве \(frontend, backend и т.п.\) Можно расширять или переопределять глобальную настройку плагинов через di.xml пространств. 
+Magento использует плагины, определенные в глобальной области система находится в определенном пространстве \(frontend, backend и т.п.\) Можно расширять или переопределять глобальную настройку плагинов через di.xml пространств.
+
+## Development
+
+При вызове методов многих моделей вместо самой модели вызывается класс Interceptor. Какой класс использовать определяется наличием плагинов. Если в di.xml есть секции plugin для этого класса, значит есть плагины. 
+
+```php
+namespace Magento\Framework\Interception\ObjectManager\Config
+
+class Developer
+{
+...
+    public function getInstanceType($instanceName)
+    {
+        $type = parent::getInstanceType($instanceName);
+        if ($this->interceptionConfig && $this->interceptionConfig->hasPlugins($instanceName)
+            && $this->interceptableValidator->validate($instanceName)
+        ) {
+            return $type . '\\Interceptor';
+        }
+        return $type;
+    }
+...
+}
+```
 
 
 
