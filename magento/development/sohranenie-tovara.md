@@ -47,7 +47,7 @@ afterGetIdentities - сбор identities для родительских объ�
 
 afterGetMediaAttributes - убирает доступ к swatch из списка ролей для простых и виртуальных продуктов
 
-**Magento\CatalogRule\Plugin\Indexer\Product\Save**
+**Magento\CatalogRule\Plugin\Indexer\Product\Save\ApplyRulesAfterReindex**
 
 afterReindex - применение правил цен каталога после сохранения ресурсной модели.
 
