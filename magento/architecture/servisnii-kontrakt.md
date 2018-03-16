@@ -53,8 +53,6 @@ Magento модульная система, что позволяет сторо�
 | AccountManagementInterface | Определяет методы createAccount, changePassword, activate, isEmailAvailable |
 | AddressManagementInterface | Определяет метода валидации адреса validate\(\) |
 
-
-
 ## Development
 
 
