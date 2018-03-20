@@ -8,7 +8,7 @@ Magento 2 имеет специальный механизм, позволяющ
 
 Скрипты хранятся в каталоге Setup модуля.
 
-Скрипт Setup/InstallSchema.php реализует интерфейс Magento\Framework\Setup\InstallSchemaInterface.
+Скрипт Setup/InstallSchema.php реализует интерфейс Magento\Framework\Setup\InstallSchemaInterface. Cоздадим три связанные таблицы c индексами и внешними ключами.
 
 ```php
 <?php
@@ -42,46 +42,38 @@ class InstallSchema implements InstallSchemaInterface
                 'id',
                 Table::TYPE_BIGINT,
                 20,
-                ['auto_increment' => true, 'primary' => true, 'unsigned' => true]
-            )
+                ['auto_increment' => true, 'primary' => true, 'unsigned' => true])
             ->addColumn(
                 'external_id',
                 Table::TYPE_BIGINT,
                 20,
-                ['nullable' => false, 'unsigned' => true]
-            )
+                ['nullable' => false, 'unsigned' => true])
             ->addColumn(
                 'date_from',
                 Table::TYPE_DATE,
                 null,
-                ['nullable' => false]
-            )
+                ['nullable' => false])
             ->addColumn(
                 'date_to',
                 Table::TYPE_DATE,
                 null,
-                ['nullable' => false]
-            )
+                ['nullable' => false])
             ->addColumn(
                 'type',
                 Table::TYPE_TEXT,
                 31,
-                ['nullable' => false]
-            )
+                ['nullable' => false])
             ->addColumn(
                 'title',
                 Table::TYPE_TEXT,
                 255,
-                ['nullable' => true]
-            )
+                ['nullable' => true])
             ->addIndex(
                 'idx_table_external_id',
-                'type'
-            )
+                'type')
             ->addIndex(
                 'idx_table_date_from_date_to',
-                ['date_from', 'date_to']
-            );
+                ['date_from', 'date_to']);
         $connection->createTable($table);
 
         $priceTableName = $setup->getTable('table_price');
@@ -114,8 +106,7 @@ class InstallSchema implements InstallSchemaInterface
                 'id')
             ->addIndex(
                 'idx_table_price_table_id',
-                'table_id'
-            );
+                'table_id');
         $connection->createTable($priceTable);
 
         $kitTableName = $setup->getTable('table_kit');
@@ -147,5 +138,5 @@ class InstallSchema implements InstallSchemaInterface
 }
 ```
 
-Здесь создаются три связанные таблицы, индексы и внешние ключи.
+
 
