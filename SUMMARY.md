@@ -7,7 +7,7 @@
     * [Модель товара](magento/architecture/model-tovara.md)
     * [Консольные команды](magento/architecture/konsolnie-komandi.md)
     * [Сервисный контракт](magento/architecture/servisnii-kontrakt.md)
-    * [Таблицы](magento/architecture/tablitsi.md)
+    * [Сущности](magento/architecture/tablitsi.md)
   * [Структура каталогов](magento/directories.md)
     * [system.xml](magento/directories/systemxml.md)
     * [acl.xml](magento/directories/aclxml.md)

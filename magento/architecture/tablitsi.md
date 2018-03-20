@@ -138,5 +138,9 @@ class InstallSchema implements InstallSchemaInterface
 }
 ```
 
+## Создание модели
+
+Класс модели в magento расширяет Magento\Framework\Model\AbstractModel для использования основного функицонала. Для поддержки сохранения в кэше необходимо реализовать интерфейс Magento\Framework\DataObject\IdentityInterface.
+
 
 
