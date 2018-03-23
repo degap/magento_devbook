@@ -5,6 +5,7 @@
 Tabs, Sections, Groups, Fields![](https://cdn.mageplaza.com/media/general/P8E2i4k.png)Располагается в директории etc/adminhtml модуля.
 
 Элемент может содержать следующие дочерние узлы:
+
 * Class - класс элемента
 * Label - заголовок 
 * Tab - идентификатор Tab, к которому относится элемент
