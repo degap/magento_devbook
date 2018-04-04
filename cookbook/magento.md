@@ -40,5 +40,11 @@ class ConcreteCommand extends Command
 }
 ```
 
+#### We can't find the role for the user you wanted.
+
+```bash
+bin/magento module:disable Shopial_Facebook
+```
+
 
 
