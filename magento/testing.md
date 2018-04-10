@@ -28,14 +28,43 @@
 
    Она отвечает за подготовку окружения, в частности она создает структуру и заполняет БД.  
    Также создает песочницу в dev/tests/integration/tmp/sandbox-0-%random\_hash%  
-   Развертывание окружения - долгая задача. Чтобы, при разработке, каждый раз не ждать,   
+   Развертывание окружения - долгая задача. Чтобы, при разработке, каждый раз не ждать,  
    лучше развернуть один раз, проставив параметр "enabled", а потом отключить.  
    Тесты должны очищать свои изменения в БД, поэтому можно просто чистить кэш в песочнице.
 
 3. Запустить тесты
+
    ```bash
    bin/magento dev:test:run integration  -c'--color=always'
    ```
+
+
+
+### Подмена экземпляра класса в DI
+
+Если нужно подставить mock объект в DI для последующего его ав вызова в конструкторах классов, заменять нужно конкретную реализацию, а не интерфейс.
+
+Например, у нас прописана зависимость:
+
+```xml
+<preference for="Vendor\Service\Gateway\API\RestManagementInterface" type="Vendor\Service\Gateway\RestManager" />
+```
+
+Мы хотим подменить реализацию вот так:
+
+```php
+$restManagerMock = $this->createMock(\Vendor\Service\Gateway\API\RestManagementInterface::class);
+$restManagerMock->method('someMethod')->will('doAnything');
+$this->objectManager->addSharedInstance($serviceManagerMock, \Vendor\Service\Gateway\API\RestManagementInterface::class);
+```
+
+Это не сработает. В менеджере объектов сначала по интерфейсу определеяется класс конкретной реализации, а потом ищеться сама реализация.
+
+Поэтому нужно делать так:
+
+```php
+$this->objectManager->addSharedInstance($serviceManagerMock, \Vendor\Service\Gateway\RestManager::class);
+```
 
 
 
