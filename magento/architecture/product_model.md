@@ -2,7 +2,7 @@
 
 Контроллер: **Magento\Catalog\Controller\Adminhtml\Product\Save**
 
-Поскольку у модели товара есть [плагины](/magento/podsistemi/plagini.md), сохранение происходит не через `Magento\Catalog\Model\Product::save()`, а через его перехватчик `Magento\Catalog\Model\Product\Interceptor::save()`.
+Поскольку у модели товара есть [плагины](/magento/subsystem/plugins.md), сохранение происходит не через `Magento\Catalog\Model\Product::save()`, а через его перехватчик `Magento\Catalog\Model\Product\Interceptor::save()`.
 
 Список плагинов в commerce-версии
 

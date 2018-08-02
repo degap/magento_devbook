@@ -22,7 +22,7 @@
 
 При установленном параметре _auto\_apply_ переадресовывается на действие _applyRules._
 
-Изменение поведения модели, проверяемое методом _isRuleBehaviorChanged_ вызывает создание и сохранение [флага](/magento/architecture/flagi-modelei.md) _catalog\_rules\_dirty, _который сбрасывается при применении правил \(_applyRules\)_
+Изменение поведения модели, проверяемое методом _isRuleBehaviorChanged_ вызывает создание и сохранение [флага](/magento/architecture/model_flags.md) _catalog\_rules\_dirty, _который сбрасывается при применении правил \(_applyRules\)_
 
 В качестве условий используются параметры товара.
 

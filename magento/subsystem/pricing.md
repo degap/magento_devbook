@@ -24,7 +24,7 @@
 
 Цены, как и все остальные свойства товара, редактировать напрямую  или задавать расписания обновлений.
 
-Изменение цены производится [переиндексированием](/magento/podsistemi/indeksirovanie.md) данных.
+Изменение цены производится [переиндексированием](/magento/subsystem/indexing.md) данных.
 
 ### Акционные цены
 
@@ -65,7 +65,7 @@ class Product
 
 ### Изменение цены при сохранении товара
 
-Цены переиндексируются в [плагинах](/magento/development/sohranenie-tovara.md):
+Цены переиндексируются в [плагинах](/magento/subsystem/plugins.md):
 
 #### **Magento\CatalogRule\Plugin\Indexer\Product\Save\ApplyRules**
 
