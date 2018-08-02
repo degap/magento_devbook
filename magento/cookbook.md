@@ -46,5 +46,14 @@ class ConcreteCommand extends Command
 bin/magento module:disable Shopial_Facebook
 ```
 
+#### Для изменения языка в файле сценария gherkin нужно в начале файла .feature добавить в комментарии нужный
+  ```
+  #language: ru
+  Feature: general
+  ...
+  ```
+
+
+
 
 
