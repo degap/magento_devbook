@@ -1,5 +1,4 @@
-#API
-
+# API
 - Magento поддерживает REST и SOAP. Обращение к WebAPI может осуществляться обоими сопособами.  
 - Включает три типа аутентификации
   - сторонние приложения аутентифицируются при помощи [OAuth 1.0a](http://devdocs.magento.com/guides/v2.0//get-started/authentication/gs-authentication-oauth.html)
@@ -18,7 +17,7 @@
 - Определяем интерфейс и реализацию
 - Добавляем права доступа, если нужно
 
-<a name="webapi_config"></a>### [Конфигурирование webapi.xml](http://devdocs.magento.com/guides/v2.0//extension-dev-guide/service-contracts/service-to-web-service.html)
+### <a name="webapi_config"></a> [Конфигурирование webapi.xml](http://devdocs.magento.com/guides/v2.0/extension-dev-guide/service-contracts/service-to-web-service.html)
 Для валидации xml используется схема расположенная по адресу:
 ```bash
 app/code/<Vendor>/Webapi/etc/webapi.xsd
