@@ -1,5 +1,5 @@
-#UI компоненты
-##[Обработка UI компонентов](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/concepts/ui_comp_config_flow_concept.html)
+# UI компоненты 
+## [Обработка UI компонентов](http://devdocs.magento.com/guides/v2.1/ui_comp_guide/concepts/ui_comp_config_flow_concept.html)
 Рассмотрим, например, формирование базового UI компонента, form  
 Представим, что у нас следующая структура в модуле:  
 - xml файл макета страницы модуля: my_page.xml
