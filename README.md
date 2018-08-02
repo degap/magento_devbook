@@ -1,4 +1,2 @@
-# Заметки по работе с magento
-
-
+# Initial page
 
