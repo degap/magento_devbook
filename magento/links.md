@@ -14,7 +14,10 @@
 [Создание новой темы в Magento 2.0](https://astrio.ru/blog/magento-2-theme-creation-ru)  
 [Модификация страницы оформления заказа в Magento 2](https://astrio.ru/blog/magento2-checkout-modifying)  
 [Доработка шагов оформления заказа](http://devdocs.magento.com/guides/v2.2/howdoi/checkout/checkout_customize.html)  
-[Создание файла system.xml](http://www.mageplaza.com/magento-2-module-development/create-system-xml-configuration-magento-2.html)
+[Создание файла system.xml](http://www.mageplaza.com/magento-2-module-development/create-system-xml-configuration-magento-2.html)  
+[Создание модального окна при помощи ui компонентов](http://blog.mageworx.com/2016/08/how-to-create-a-modal-window-in-a-custom-field-with-a-code-in-magento-2/)  
+[Knockout js в magento 2](https://amasty.com/blog/tips-and-examples-of-using-knockout-in-magento-2/)  
+[Manage Magento 2 Order Status Ultimate Guide](https://www.magestore.com/magento-2-tutorial/manage-order-status-in-magento-2/)
 
 ## Расчет стоимости заказа
 
